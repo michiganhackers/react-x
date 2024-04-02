@@ -1,23 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function Post({ post }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3>Username</h3>
+      <p>{post.text}</p>
+    </div>
+  )
+}
+
+function App() {
+
+  const posts = [
+    {
+      id: 0,
+      username: 'brian',
+      text: 'Weather is so good rn'
+    },
+    {
+      id: 0,
+      username: 'brian',
+      text: 'Weather is bad'
+    },
+    {
+      id: 0,
+      username: 'brian',
+      text: 'asdklfkjasldkfjalksdjf'
+    },
+    {
+      id: 0,
+      username: 'brian',
+      text: '2o35462098345709283457'
+    },
+  ]
+
+  return (
+    <div>
+      {posts.map((post) => <Post post={post} />)}
     </div>
   );
 }

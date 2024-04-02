@@ -1,13 +1,5 @@
 import './App.css';
-
-function Post({ post }) {
-  return (
-    <div>
-      <h3>Username</h3>
-      <p>{post.text}</p>
-    </div>
-  )
-}
+import Post from './components/Post'
 
 function App() {
 
@@ -35,7 +27,7 @@ function App() {
   ]
 
   return (
-    <div>
+    <div className="postContainer">
       {posts.map((post) => <Post post={post} />)}
     </div>
   );

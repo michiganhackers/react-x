@@ -11,7 +11,8 @@ const Input = ({ setPosts }) => {
       username: USERNAME,
       text: text
     }
-    setPosts(prev => [...prev, newPost])
+    setPosts(prev => [newPost, ...prev])
+    setText('')
   }
 
   return (

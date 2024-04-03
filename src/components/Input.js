@@ -6,10 +6,18 @@ const Input = ({ setPosts }) => {
 
   const [text, setText] = useState('')
 
+  const addPost = () => {
+    const newPost = {
+      username: USERNAME,
+      text: text
+    }
+    setPosts(prev => [...prev, newPost])
+  }
+
   return (
     <div className="inputContainer">
       <input type="text" placeholder="What is happening!?" className="postInput" value={text} onChange={(e) => setText(e.target.value)} />
-      <button className="postButton">Post</button>
+      <button className="postButton" onClick={addPost}>Post</button>
     </div>
   )
 }

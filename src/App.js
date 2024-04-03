@@ -35,7 +35,7 @@ function App() {
       <div className="nav">
         <img className="logo" alt="logo" src="https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712016000&semt=ais" />
       </div>
-      <Input />
+      <Input setPosts={setPosts} />
       <div className="postContainer">
         {posts.map((post) => <Post post={post} />)}
       </div>

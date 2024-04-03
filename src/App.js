@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import './App.css';
 import Input from './components/Input'
 import Post from './components/Post'
 
 function App() {
+
+  const [count, setCount] = useState(0)
 
   const posts = [
     {
@@ -36,6 +39,9 @@ function App() {
       <div className="postContainer">
         {posts.map((post) => <Post post={post} />)}
       </div>
+      <button>+</button>
+      <button>-</button>
+      <p>{count}</p>
     </div>
   );
 }

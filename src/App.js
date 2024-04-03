@@ -39,8 +39,8 @@ function App() {
       <div className="postContainer">
         {posts.map((post) => <Post post={post} />)}
       </div>
-      <button>+</button>
-      <button>-</button>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
       <p>{count}</p>
     </div>
   );
